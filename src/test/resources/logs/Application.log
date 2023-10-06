@@ -1,0 +1,36 @@
+06:32:08.329 [main] INFO  - In start of the setUp()
+06:32:08.337 [main] INFO  - UserDir: /home/balaji/Documents/Frameworks/API-UI-Framework
+06:32:08.338 [main] INFO  - Config file is loaded!
+06:32:08.338 [main] INFO  - OR file is loaded!
+06:32:08.339 [main] INFO  - browser: chrome
+06:32:13.849 [main] INFO  - 'chrome' browser is loaded!
+06:32:13.989 [main] INFO  - In end of the setUp()
+06:32:14.148 [main] INFO  - In start of the getData()
+06:32:14.164 [main] INFO  - In end of the getData()
+06:32:14.240 [main] INFO  - In start of the loginTest()
+06:32:14.241 [main] INFO  - Test URL: https://www.saucedemo.com/
+06:32:14.903 [main] INFO  - Test application URL is loaded!
+06:32:14.931 [main] INFO  - Page title is: Swag Labs
+06:32:14.932 [main] INFO  - Username: standard_user and password is: secret_sauce
+06:32:16.767 [main] INFO  - In end of the loginTest()
+06:32:16.943 [main] INFO  - In start of the loginTest()
+06:32:16.944 [main] INFO  - Test URL: https://www.saucedemo.com/
+06:32:17.110 [main] INFO  - Test application URL is loaded!
+06:32:17.133 [main] INFO  - Page title is: Swag Labs
+06:32:17.133 [main] INFO  - Username: locked_out_user and password is: secret_sauce
+06:32:17.791 [main] INFO  - In end of the loginTest()
+06:32:17.798 [main] INFO  - In start of the loginTest()
+06:32:17.798 [main] INFO  - Test URL: https://www.saucedemo.com/
+06:32:17.895 [main] INFO  - Test application URL is loaded!
+06:32:17.914 [main] INFO  - Page title is: Swag Labs
+06:32:17.914 [main] INFO  - Username: problem_user and password is: secret_sauce
+06:32:18.769 [main] INFO  - In end of the loginTest()
+06:32:18.774 [main] INFO  - In start of the loginTest()
+06:32:18.774 [main] INFO  - Test URL: https://www.saucedemo.com/
+06:32:18.884 [main] INFO  - Test application URL is loaded!
+06:32:18.896 [main] INFO  - Page title is: Swag Labs
+06:32:18.896 [main] INFO  - Username: performance_glitch_user and password is: secret_sauce
+06:32:24.743 [main] INFO  - In end of the loginTest()
+06:32:24.768 [main] INFO  - In start of the tearDown()
+06:32:24.928 [main] INFO  - 'chrome' browser is closed!
+06:32:24.929 [main] INFO  - In end of the tearDown()

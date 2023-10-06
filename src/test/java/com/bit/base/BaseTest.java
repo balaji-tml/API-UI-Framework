@@ -1,0 +1,131 @@
+package com.bit.base;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.bit.utilities.ExcelReader;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
+import java.util.Properties;
+
+import static com.bit.utilities.TestConfiguration.getCurrentPlatform;
+
+public class BaseTest {
+
+    protected static WebDriver driver;
+    protected ChromeOptions chromeOptions;
+    protected FirefoxOptions firefoxOptions;
+    protected URL remoteURL;
+
+    //From Datadrivenframework
+    protected Properties config = new Properties();
+    protected Properties OR = new Properties();
+    FileInputStream fis = null;
+    protected static Logger log;
+//    public ExcelReader excel;
+
+    protected String userDir = System.getProperty("user.dir");
+    public String path = userDir + "/src/test/resources/excel/Testdata.xlsx";
+    public ExcelReader excel = new ExcelReader(path);
+
+    //public ExtentReports rep = ExtentManager.createExtentReports();
+    public ExtentReports extent = null;
+
+    public ExtentTest test = null;
+
+    protected static String browser, appUrl;
+
+    public WebDriverWait wait = null;
+
+    @BeforeSuite
+    public void setUp() {
+        if (driver == null) {
+            log = LogManager.getLogger(BaseTest.class);
+            log.info("In start of the setUp()");
+            userDir = System.getProperty("user.dir");
+            log.info("UserDir: " + userDir);
+
+            try {
+                fis = new FileInputStream(userDir + "/src/test/resources/properties/Config.properties");
+            } catch (FileNotFoundException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            try {
+                config.load(fis);
+                log.info("Config file is loaded!");
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            try {
+                fis = new FileInputStream(userDir + "/src/test/resources/properties/OR.properties");
+            } catch (FileNotFoundException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            try {
+                OR.load(fis);
+                log.info("OR file is loaded!");
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            browser = config.getProperty("browser");
+            log.info("browser: " + browser);
+            if (browser.equalsIgnoreCase("CHROME")) {
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
+            } else if (browser.equalsIgnoreCase("FIREFOX")) {
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+            }else if (browser.equalsIgnoreCase("EDGE")) {
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver();
+            }
+            else {
+                System.out.println("Please select valid browser!\n");
+            }
+            wait = new WebDriverWait(driver, Duration.ofMinutes(5));
+            log.info("'"+browser +"' browser is loaded!");
+        }
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        log.info("In end of the setUp()");
+    }
+
+    @AfterSuite
+    public void tearDown() {
+        log.info("In start of the tearDown()");
+        if (driver != null) {
+            driver.quit();
+            log.info("'"+browser+"' browser is closed!");
+        }
+        log.info("In end of the tearDown()");
+    }
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
+
+}
