@@ -21,7 +21,7 @@ public class LoginTest extends BaseTest {
             throw new SkipException("Skipping the case as the Run mode for data set is NO");
         }
         try {
-            String screenshotName = null;    //"Img_"+new SimpleDateFormat("yyyyMMddHHmm'.jpg'").format(new Date());
+            String screenshotName = null;
             Date d = new Date();
             screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
             String appUrl = config.getProperty("swaglabsUrl");

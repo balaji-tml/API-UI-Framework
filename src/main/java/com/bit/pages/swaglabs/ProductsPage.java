@@ -19,12 +19,14 @@ public class ProductsPage extends BasePage {
 
    public void clickOnBackpackProduct()
    {
-       driver.findElement(backpack).click();
+//       driver.findElement(backpack).click();
+       click(backpack);
    }
 
     public void clickOnShoppingCart()
     {
-        driver.findElement(shoppingCart).click();
+//        driver.findElement(shoppingCart).click();
+        click(shoppingCart);
     }
 
     
