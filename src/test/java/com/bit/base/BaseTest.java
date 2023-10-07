@@ -58,59 +58,52 @@ public class BaseTest {
 
     @BeforeSuite
     public void setUp() {
-        if (driver == null) {
-            log = LogManager.getLogger(BaseTest.class);
-            log.info("In start of the setUp()");
-            userDir = System.getProperty("user.dir");
-            log.info("UserDir: " + userDir);
-
-            try {
+        try {
+            if (driver == null) {
+                log = LogManager.getLogger(BaseTest.class);
+                log.info("In start of the setUp()");
+                userDir = System.getProperty("user.dir");
+                log.info("UserDir: " + userDir);
                 fis = new FileInputStream(userDir + "/src/test/resources/properties/Config.properties");
-            } catch (FileNotFoundException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-            try {
                 config.load(fis);
                 log.info("Config file is loaded!");
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-            try {
                 fis = new FileInputStream(userDir + "/src/test/resources/properties/OR.properties");
-            } catch (FileNotFoundException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-            try {
                 OR.load(fis);
                 log.info("OR file is loaded!");
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
+                browser = config.getProperty("browser");
+                log.info("browser: " + browser);
+                if (browser.equalsIgnoreCase("CHROME")) {
+                    WebDriverManager.chromedriver().setup();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    driver = new ChromeDriver(options);
+                } else if (browser.equalsIgnoreCase("FIREFOX")) {
+                    WebDriverManager.firefoxdriver().setup();
+                    driver = new FirefoxDriver();
+                } else if (browser.equalsIgnoreCase("EDGE")) {
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver();
+                } else {
+                    System.out.println("Please select valid browser!\n");
+                }
+                wait = new WebDriverWait(driver, Duration.ofMinutes(5));
+                log.info("'" + browser + "' browser is loaded!");
             }
-            browser = config.getProperty("browser");
-            log.info("browser: " + browser);
-            if (browser.equalsIgnoreCase("CHROME")) {
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
-            } else if (browser.equalsIgnoreCase("FIREFOX")) {
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
-            }else if (browser.equalsIgnoreCase("EDGE")) {
-                WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
-            }
-            else {
-                System.out.println("Please select valid browser!\n");
-            }
-            wait = new WebDriverWait(driver, Duration.ofMinutes(5));
-            log.info("'"+browser +"' browser is loaded!");
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
+            log.info("In end of the setUp()");
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        log.info("In end of the setUp()");
+
     }
 
     @AfterSuite
@@ -118,7 +111,7 @@ public class BaseTest {
         log.info("In start of the tearDown()");
         if (driver != null) {
             driver.quit();
-            log.info("'"+browser+"' browser is closed!");
+            log.info("'" + browser + "' browser is closed!");
         }
         log.info("In end of the tearDown()");
     }

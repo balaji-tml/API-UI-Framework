@@ -13,7 +13,6 @@ public class CartPage extends BasePage {
 
     public void clickOnCheckout()
     {
-        //driver.findElement(checkout).click();
         click(checkout);
     }
 }

@@ -1,41 +1,52 @@
-14:35:33.382 [main] INFO  - In start of the setUp()
-14:35:33.388 [main] INFO  - UserDir: /home/balaji/Documents/Frameworks/API-UI-Framework
-14:35:33.388 [main] INFO  - Config file is loaded!
-14:35:33.389 [main] INFO  - OR file is loaded!
-14:35:33.389 [main] INFO  - browser: chrome
-14:35:40.091 [main] INFO  - 'chrome' browser is loaded!
-14:35:40.233 [main] INFO  - In end of the setUp()
-14:35:40.257 [main] INFO  - In onStart()
-14:35:40.454 [TestNG-test=Buy Product Test-1] INFO  - In start of the getData()
-14:35:40.477 [TestNG-test=Buy Product Test-1] INFO  - In end of the getData()
-14:35:40.547 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
-14:35:41.429 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
-14:35:43.654 [TestNG-test=Buy Product Test-1] INFO  - In end of the loginTest()
-14:35:43.654 [TestNG-test=Buy Product Test-1] INFO  - In start of the ProductsPage()
-14:35:43.863 [TestNG-test=Buy Product Test-1] INFO  - Click on Add Backpack product to cart
-14:35:44.056 [TestNG-test=Buy Product Test-1] INFO  - Click on Shopping cart
-14:35:44.056 [TestNG-test=Buy Product Test-1] INFO  - In end of the ProductsPage()
-14:35:44.056 [TestNG-test=Buy Product Test-1] INFO  - In start of the CartPage()
-14:35:44.242 [TestNG-test=Buy Product Test-1] INFO  - Click on Checkout
-14:35:44.242 [TestNG-test=Buy Product Test-1] INFO  - In end of the CartPage()
-14:35:44.242 [TestNG-test=Buy Product Test-1] INFO  - In start of the CheckoutPage()
-14:35:44.814 [TestNG-test=Buy Product Test-1] INFO  - Complete Checkout
-14:35:44.815 [TestNG-test=Buy Product Test-1] INFO  - In end of the CheckoutPage()
-14:35:44.815 [TestNG-test=Buy Product Test-1] INFO  - In start of the ConfirmationPage()
-14:35:44.949 [TestNG-test=Buy Product Test-1] INFO  - Click on Finish
-14:35:44.949 [TestNG-test=Buy Product Test-1] INFO  - In end of the ConfirmationPage()
-14:35:44.949 [TestNG-test=Buy Product Test-1] INFO  - In end of the buyProductTest()
-14:35:44.957 [TestNG-test=Buy Product Test-1] INFO  - In onTestSuccess()
-14:35:45.471 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
-14:35:45.472 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
-14:35:45.474 [TestNG-test=Buy Product Test-1] INFO  - In onTestSkipped()
-14:35:46.237 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
-14:35:46.239 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
-14:35:46.240 [TestNG-test=Buy Product Test-1] INFO  - In onTestSkipped()
-14:35:46.271 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
-14:35:46.272 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
-14:35:46.273 [TestNG-test=Buy Product Test-1] INFO  - In onTestSkipped()
-14:35:46.305 [main] INFO  - In onFinish()
-14:35:46.341 [main] INFO  - In start of the tearDown()
-14:35:46.503 [main] INFO  - 'chrome' browser is closed!
-14:35:46.503 [main] INFO  - In end of the tearDown()
+03:00:40.820 [main] INFO  - In start of the setUp()
+03:00:40.827 [main] INFO  - UserDir: /home/balaji/Documents/Frameworks/API-UI-Framework
+03:00:40.827 [main] INFO  - Config file is loaded!
+03:00:40.827 [main] INFO  - OR file is loaded!
+03:00:40.828 [main] INFO  - browser: chrome
+03:00:46.251 [main] INFO  - 'chrome' browser is loaded!
+03:00:46.415 [main] INFO  - In end of the setUp()
+03:00:46.434 [main] INFO  - In onStart()
+03:00:46.586 [TestNG-test=Buy Product Test-1] INFO  - In start of the getData()
+03:00:46.613 [TestNG-test=Buy Product Test-1] INFO  - In end of the getData()
+03:00:46.745 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
+03:00:47.692 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
+03:00:48.813 [TestNG-test=Buy Product Test-1] INFO  - Entered value in WebElement
+03:00:48.979 [TestNG-test=Buy Product Test-1] INFO  - Entered value in WebElement
+03:00:49.138 [TestNG-test=Buy Product Test-1] INFO  - Clicked on WebElement
+03:00:49.517 [TestNG-test=Buy Product Test-1] INFO  - In end of the loginTest()
+03:00:49.518 [TestNG-test=Buy Product Test-1] INFO  - In start of the ProductsPage()
+03:00:49.764 [TestNG-test=Buy Product Test-1] INFO  - Clicked on WebElement
+03:00:49.764 [TestNG-test=Buy Product Test-1] INFO  - Click on Add Backpack product to cart
+03:00:49.938 [TestNG-test=Buy Product Test-1] INFO  - Clicked on WebElement
+03:00:49.939 [TestNG-test=Buy Product Test-1] INFO  - Click on Shopping cart
+03:00:49.939 [TestNG-test=Buy Product Test-1] INFO  - In end of the ProductsPage()
+03:00:49.939 [TestNG-test=Buy Product Test-1] INFO  - In start of the CartPage()
+03:00:50.101 [TestNG-test=Buy Product Test-1] INFO  - Clicked on WebElement
+03:00:50.101 [TestNG-test=Buy Product Test-1] INFO  - Click on Checkout
+03:00:50.101 [TestNG-test=Buy Product Test-1] INFO  - In end of the CartPage()
+03:00:50.101 [TestNG-test=Buy Product Test-1] INFO  - In start of the CheckoutPage()
+03:00:50.270 [TestNG-test=Buy Product Test-1] INFO  - Entered value in WebElement
+03:00:50.396 [TestNG-test=Buy Product Test-1] INFO  - Entered value in WebElement
+03:00:50.515 [TestNG-test=Buy Product Test-1] INFO  - Entered value in WebElement
+03:00:50.627 [TestNG-test=Buy Product Test-1] INFO  - Clicked on WebElement
+03:00:50.627 [TestNG-test=Buy Product Test-1] INFO  - Complete Checkout
+03:00:50.627 [TestNG-test=Buy Product Test-1] INFO  - In end of the CheckoutPage()
+03:00:50.627 [TestNG-test=Buy Product Test-1] INFO  - In start of the ConfirmationPage()
+03:00:50.758 [TestNG-test=Buy Product Test-1] INFO  - Clicked on WebElement
+03:00:50.758 [TestNG-test=Buy Product Test-1] INFO  - Click on Finish
+03:00:50.759 [TestNG-test=Buy Product Test-1] INFO  - In end of the ConfirmationPage()
+03:00:50.759 [TestNG-test=Buy Product Test-1] INFO  - In end of the buyProductTest()
+03:00:50.766 [TestNG-test=Buy Product Test-1] INFO  - In onTestSuccess()
+03:00:51.292 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
+03:00:51.294 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
+03:00:51.295 [TestNG-test=Buy Product Test-1] INFO  - In onTestSkipped()
+03:00:51.975 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
+03:00:51.976 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
+03:00:51.979 [TestNG-test=Buy Product Test-1] INFO  - In onTestSkipped()
+03:00:52.022 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
+03:00:52.025 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
+03:00:52.027 [TestNG-test=Buy Product Test-1] INFO  - In onTestSkipped()
+03:00:52.070 [main] INFO  - In onFinish()
+03:00:52.122 [main] INFO  - In start of the tearDown()
+03:00:52.316 [main] INFO  - 'chrome' browser is closed!
+03:00:52.317 [main] INFO  - In end of the tearDown()

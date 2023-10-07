@@ -20,17 +20,6 @@ public class LoginPage extends BasePage {
 
 
     public void login(String user, String pwd) {
-//        if (usernameTXT.isDisplayed()) {
-//            usernameTXT.clear();
-//            usernameTXT.sendKeys(user + Keys.ENTER);
-//        }
-//        if (passwordTXT.isDisplayed()) {
-//            passwordTXT.clear();
-//            passwordTXT.sendKeys(pwd + Keys.ENTER);
-//        }
-//        if (loginBTN.isDisplayed()) {
-//            loginBTN.click();
-//        }
         enterValue(usernameTXT,user);
         enterValue(passwordTXT,pwd);
         click(loginBTN);

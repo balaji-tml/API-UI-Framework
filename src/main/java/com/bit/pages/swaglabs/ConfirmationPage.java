@@ -14,7 +14,6 @@ public class ConfirmationPage extends BasePage {
 
     public void clickOnFinish()
     {
-//        driver.findElement(finish).click();
         click(finish);
 
     }

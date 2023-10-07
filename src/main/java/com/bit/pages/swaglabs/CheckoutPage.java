@@ -18,10 +18,6 @@ public class CheckoutPage extends BasePage {
 
     public void checkOut(String firstName,String lastName,String postalCode)
     {
-//        driver.findElement(firstNameTxt).sendKeys(firstName);
-//        driver.findElement(lastNameTxt).sendKeys(lastName);
-//        driver.findElement(postalCodeTxt).sendKeys(postalCode);
-//        driver.findElement(continueBtn).click();
           enterValue(firstNameTxt,firstName);
           enterValue(lastNameTxt,lastName);
           enterValue(postalCodeTxt,postalCode);
