@@ -1,36 +1,41 @@
-06:32:08.329 [main] INFO  - In start of the setUp()
-06:32:08.337 [main] INFO  - UserDir: /home/balaji/Documents/Frameworks/API-UI-Framework
-06:32:08.338 [main] INFO  - Config file is loaded!
-06:32:08.338 [main] INFO  - OR file is loaded!
-06:32:08.339 [main] INFO  - browser: chrome
-06:32:13.849 [main] INFO  - 'chrome' browser is loaded!
-06:32:13.989 [main] INFO  - In end of the setUp()
-06:32:14.148 [main] INFO  - In start of the getData()
-06:32:14.164 [main] INFO  - In end of the getData()
-06:32:14.240 [main] INFO  - In start of the loginTest()
-06:32:14.241 [main] INFO  - Test URL: https://www.saucedemo.com/
-06:32:14.903 [main] INFO  - Test application URL is loaded!
-06:32:14.931 [main] INFO  - Page title is: Swag Labs
-06:32:14.932 [main] INFO  - Username: standard_user and password is: secret_sauce
-06:32:16.767 [main] INFO  - In end of the loginTest()
-06:32:16.943 [main] INFO  - In start of the loginTest()
-06:32:16.944 [main] INFO  - Test URL: https://www.saucedemo.com/
-06:32:17.110 [main] INFO  - Test application URL is loaded!
-06:32:17.133 [main] INFO  - Page title is: Swag Labs
-06:32:17.133 [main] INFO  - Username: locked_out_user and password is: secret_sauce
-06:32:17.791 [main] INFO  - In end of the loginTest()
-06:32:17.798 [main] INFO  - In start of the loginTest()
-06:32:17.798 [main] INFO  - Test URL: https://www.saucedemo.com/
-06:32:17.895 [main] INFO  - Test application URL is loaded!
-06:32:17.914 [main] INFO  - Page title is: Swag Labs
-06:32:17.914 [main] INFO  - Username: problem_user and password is: secret_sauce
-06:32:18.769 [main] INFO  - In end of the loginTest()
-06:32:18.774 [main] INFO  - In start of the loginTest()
-06:32:18.774 [main] INFO  - Test URL: https://www.saucedemo.com/
-06:32:18.884 [main] INFO  - Test application URL is loaded!
-06:32:18.896 [main] INFO  - Page title is: Swag Labs
-06:32:18.896 [main] INFO  - Username: performance_glitch_user and password is: secret_sauce
-06:32:24.743 [main] INFO  - In end of the loginTest()
-06:32:24.768 [main] INFO  - In start of the tearDown()
-06:32:24.928 [main] INFO  - 'chrome' browser is closed!
-06:32:24.929 [main] INFO  - In end of the tearDown()
+02:53:27.821 [main] INFO  - In start of the setUp()
+02:53:27.827 [main] INFO  - UserDir: /home/balaji/Documents/Frameworks/API-UI-Framework
+02:53:27.827 [main] INFO  - Config file is loaded!
+02:53:27.827 [main] INFO  - OR file is loaded!
+02:53:27.827 [main] INFO  - browser: chrome
+02:53:33.920 [main] INFO  - 'chrome' browser is loaded!
+02:53:34.096 [main] INFO  - In end of the setUp()
+02:53:34.133 [main] INFO  - In onStart()
+02:53:34.357 [TestNG-test=Buy Product Test-1] INFO  - In start of the getData()
+02:53:34.382 [TestNG-test=Buy Product Test-1] INFO  - In end of the getData()
+02:53:34.494 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
+02:53:35.559 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
+02:53:37.625 [TestNG-test=Buy Product Test-1] INFO  - In end of the loginTest()
+02:53:37.625 [TestNG-test=Buy Product Test-1] INFO  - In start of the ProductsPage()
+02:53:37.776 [TestNG-test=Buy Product Test-1] INFO  - Click on Add Backpack product to cart
+02:53:37.929 [TestNG-test=Buy Product Test-1] INFO  - Click on Shopping cart
+02:53:37.930 [TestNG-test=Buy Product Test-1] INFO  - In end of the ProductsPage()
+02:53:37.930 [TestNG-test=Buy Product Test-1] INFO  - In start of the CartPage()
+02:53:38.069 [TestNG-test=Buy Product Test-1] INFO  - Click on Checkout
+02:53:38.069 [TestNG-test=Buy Product Test-1] INFO  - In end of the CartPage()
+02:53:38.069 [TestNG-test=Buy Product Test-1] INFO  - In start of the CheckoutPage()
+02:53:38.635 [TestNG-test=Buy Product Test-1] INFO  - Complete Checkout
+02:53:38.636 [TestNG-test=Buy Product Test-1] INFO  - In end of the CheckoutPage()
+02:53:38.636 [TestNG-test=Buy Product Test-1] INFO  - In start of the ConfirmationPage()
+02:53:38.793 [TestNG-test=Buy Product Test-1] INFO  - Click on Finish
+02:53:38.793 [TestNG-test=Buy Product Test-1] INFO  - In end of the ConfirmationPage()
+02:53:38.794 [TestNG-test=Buy Product Test-1] INFO  - In end of the buyProductTest()
+02:53:38.803 [TestNG-test=Buy Product Test-1] INFO  - In onTestSuccess()
+02:53:39.295 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
+02:53:39.298 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
+02:53:39.299 [TestNG-test=Buy Product Test-1] INFO  - In onTestSkipped()
+02:53:40.144 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
+02:53:40.147 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
+02:53:40.148 [TestNG-test=Buy Product Test-1] INFO  - In onTestSkipped()
+02:53:40.174 [TestNG-test=Buy Product Test-1] INFO  - In onTestStart()
+02:53:40.175 [TestNG-test=Buy Product Test-1] INFO  - In start of the buyProductTest()
+02:53:40.176 [TestNG-test=Buy Product Test-1] INFO  - In onTestSkipped()
+02:53:40.209 [main] INFO  - In onFinish()
+02:53:40.263 [main] INFO  - In start of the tearDown()
+02:53:40.479 [main] INFO  - 'chrome' browser is closed!
+02:53:40.479 [main] INFO  - In end of the tearDown()
