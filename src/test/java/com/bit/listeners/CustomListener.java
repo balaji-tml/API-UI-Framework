@@ -2,6 +2,7 @@ package com.bit.listeners;
 
 import com.aventstack.extentreports.Status;
 import com.bit.base.BaseTest;
+import com.bit.base.BaseTestUI;
 import com.bit.utilities.ExtentManager;
 import com.bit.utilities.TestUtil;
 import org.openqa.selenium.OutputType;
@@ -19,7 +20,7 @@ import java.util.Objects;
 import static com.bit.utilities.ExtentTestManager.getTest;
 import static com.bit.utilities.ExtentTestManager.startTest;
 
-public class CustomListener extends BaseTest implements ITestListener {
+public class CustomListener extends BaseTestUI implements ITestListener {
     String screenshotName = null;
     public String meaasgeBody;
     private static String getTestMethodName(ITestResult iTestResult) {
@@ -49,7 +50,7 @@ public class CustomListener extends BaseTest implements ITestListener {
         //TestUtil.captureScreenshot(userDir + "/reports/");
         //Get driver from BaseTest and assign to local webdriver variable.
         Object testClass = result.getInstance();
-        WebDriver driver = ((BaseTest) testClass).getDriver();
+        WebDriver driver = ((BaseTestUI) testClass).getDriver();
         //Take base64Screenshot screenshot for extent reports
         String base64Screenshot =
                 "data:image/png;base64," + ((TakesScreenshot) Objects.requireNonNull(driver)).getScreenshotAs(OutputType.BASE64);
@@ -67,7 +68,7 @@ public class CustomListener extends BaseTest implements ITestListener {
         TestUtil.captureScreenshot(userDir + "/target/screenshots/"+screenshotName);
         //Get driver from BaseTest and assign to local webdriver variable.
         Object testClass = result.getInstance();
-        WebDriver driver = ((BaseTest) testClass).getDriver();
+        WebDriver driver = ((BaseTestUI) testClass).getDriver();
         //Take base64Screenshot screenshot for extent reports
         String base64Screenshot =
                 "data:image/png;base64," + ((TakesScreenshot) Objects.requireNonNull(driver)).getScreenshotAs(OutputType.BASE64);

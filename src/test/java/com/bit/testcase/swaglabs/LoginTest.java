@@ -1,6 +1,7 @@
 package com.bit.testcase.swaglabs;
 
 import com.bit.base.BaseTest;
+import com.bit.base.BaseTestUI;
 import com.bit.pages.swaglabs.LoginPage;
 import com.bit.utilities.DataProviders;
 import com.bit.utilities.TestUtil;
@@ -11,7 +12,7 @@ import org.testng.annotations.Test;
 import java.util.Date;
 import java.util.Hashtable;
 
-public class LoginTest extends BaseTest {
+public class LoginTest extends BaseTestUI {
     @Test(dataProviderClass = DataProviders.class, dataProvider = "dp", description = "Login to Swags Labs Application")
     @Description("Test Description: Login test with valid and invalid credentials")
     public void loginTest(Hashtable<String, String> data) {
@@ -24,6 +25,7 @@ public class LoginTest extends BaseTest {
             String screenshotName = null;
             Date d = new Date();
             screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
+//            String appUrl = config.getProperty("swaglabsUrl");
             String appUrl = config.getProperty("swaglabsUrl");
             log.info("Test URL: " + appUrl);
             String username = data.get("username");

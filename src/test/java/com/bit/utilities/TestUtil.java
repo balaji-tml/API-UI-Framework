@@ -1,6 +1,7 @@
 package com.bit.utilities;
 
 import com.bit.base.BaseTest;
+import com.bit.base.BaseTestUI;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -10,7 +11,7 @@ import java.io.IOException;
 import java.util.Date;
 
 
-public class TestUtil extends BaseTest {
+public class TestUtil extends BaseTestUI {
 
     public static String screenshotPath, screenshotName;
     public static String userDir = System.getProperty("user.dir");

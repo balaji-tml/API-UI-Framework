@@ -3,6 +3,7 @@ package com.bit.listeners;
 
 import com.aventstack.extentreports.Status;
 import com.bit.base.BaseTest;
+import com.bit.base.BaseTestUI;
 import com.bit.utilities.TestUtil;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -32,7 +33,7 @@ public class Retry implements IRetryAnalyzer {
     }
     public void extendReportsFailOperations(ITestResult iTestResult) {
         Object testClass = iTestResult.getInstance();
-        WebDriver driver = ((BaseTest) testClass).getDriver();
+        WebDriver driver = ((BaseTestUI) testClass).getDriver();
         String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
         getTest().log(Status.FAIL, "Test Failed",
                 getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));

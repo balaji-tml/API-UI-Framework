@@ -5,11 +5,11 @@
 		<listener class-name="com.bit.listeners.CustomListener"/>
 		<listener class-name="com.bit.listeners.AnnotationTransformer"/>
 	</listeners>
-<!--	<test name="Login Test" parallel="methods">-->
-<!--		<classes>-->
-<!--			<class name="com.bit.testcase.swaglabs.LoginTest"/>-->
-<!--		</classes>-->
-<!--	</test>-->
+	<test name="Login Test" parallel="methods">
+		<classes>
+			<class name="com.bit.testcase.swaglabs.LoginTest"/>
+		</classes>
+	</test>
 	<test name="Buy Product Test" parallel="methods">
 		<classes>
 <!--			<class name="com.bit.testcases.LoginTest"/>-->
